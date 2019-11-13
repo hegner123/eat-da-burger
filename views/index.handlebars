@@ -1,24 +1,39 @@
+<div class="container">
+
+  <div class="jumbotron">
 <h1>Burgers</h1>
+  </div>
 
-<h2>Burgers to be devoured</h2>
+<div class="row">
+  <div class="col-6">
+<h2 class="col-12">Burgers to be devoured</h2>
 
+<div class="row">
 <ul>
   {{#each burger}}
     {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
+      {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
+</div>
+<div class="col-6">
+<div class="row">
 <h2>Burgers that have been eaten</h2>
+</div>
 
-<ul>
+<ul class="col-12">
   {{#each burger}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
+</div>
+</div>
+
 
 <h2>Add a burger</h2>
 <form class="create-form">
@@ -30,3 +45,5 @@
 
   <button type="submit">Add Burger</button>
 </form>
+
+</div>
