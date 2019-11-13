@@ -10,11 +10,11 @@
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers that have been eaten</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
+  {{#each burger}}
+    {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
